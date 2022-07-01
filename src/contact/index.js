@@ -34,7 +34,48 @@ export default function ContactUs() {
             </address>
             <p>{contactConfig.description}</p>
           </Col>
-        
+          <Col lg="7" className="d-flex align-items-center">
+            <form  className="contact__form w-100">
+              <Row>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control"
+                    id="name"
+                    name="name"
+                    placeholder="Name" 
+                    type="text"
+                    required 
+                  />
+                </Col>
+                <Col lg="6" className="form-group">
+                  <input
+                    className="form-control rounded-0"
+                    id="email"
+                    name="email"
+                    placeholder="Email"
+                    type="email" 
+                    required 
+                  />
+                </Col>
+              </Row>
+              <textarea
+                className="form-control rounded-0"
+                id="message"
+                name="message"
+                placeholder="Message"
+                rows="5" 
+                required
+              ></textarea>
+              <br />
+              <Row>
+                <Col lg="12" className="form-group">
+                  <button className="btn ac_btn bg-primary" type="submit"> 
+                  Send
+                  </button>
+                </Col>
+              </Row>
+            </form>
+          </Col>
         </Row>
       </Container>
   );
